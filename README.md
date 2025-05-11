@@ -1,17 +1,30 @@
-# Tomato-Leaf-Disease-Classification-with-Convolution-Neural-Network-CNN-
+# Tomato Leaf Disease Classification using Deep Learning
 
-# Plant Disease Classification using Deep Learning
-
-This project focuses on the classification of plant diseases using image data from the [Plant Disease Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease) available on Kaggle. The goal is to develop a model that can accurately identify plant diseases from leaf images using computer vision techniques.
+This project focuses on the classification of Tomato Leaf Disease using image data from the [Plant Disease Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease) available on Kaggle. The goal is to develop a model that can accurately identify plant diseases from leaf images using computer vision techniques.
 
 ---
 
 ## 📁 Dataset
 
-The dataset contains **54,306** images of plant leaves categorized into **38 classes**. These classes represent combinations of plant species and associated diseases, including healthy leaves.
+The dataset contains **20,639** images of plant leaves categorized into **15 classes**. These classes represent combinations of plant species and associated diseases, including healthy leaves.
+- **Categories**
+-Pepper__bell___Bacterial_spot
+-Pepper__bell___healthy
+-Potato___Early_blight
+-Potato___Late_blight
+-Potato___healthy
+-Tomato_Bacterial_spot
+-Tomato_Early_blight
+-Tomato_Late_blight
+-Tomato_Leaf_Mold
+-Tomato_Septoria_leaf_spot
+-Tomato_Spider_mites_Two_spotted_spider_mite
+-Tomato__Target_Spot
+-Tomato__Tomato_YellowLeaf__Curl_Virus
+-Tomato__Tomato_mosaic_virus
+-Tomato_healthy
 
-- **Format**: `.jpg` images
-- **Categories**: Examples include `Apple___Black_rot`, `Tomato___Late_blight`, `Corn___Healthy`, etc.
+- **Format**: `.jpg` images size 256x256 pixel
 - **Structure**: Folder-based classification (one folder per class)
 
 ---
@@ -19,9 +32,8 @@ The dataset contains **54,306** images of plant leaves categorized into **38 cla
 ## ⚙️ Methodology
 
 ### 1. Data Preprocessing
-- Resized all images to a fixed size (e.g., 224x224 pixels)
+- Data Augmentation for classes with < 1000 images
 - Normalized pixel values
-- Applied data augmentation (e.g., rotation, flipping) to improve generalization
 
 ### 2. Model Architecture
 - **Base Model**: Transfer learning using a pre-trained CNN model (e.g., `ResNet50`, `EfficientNetB0`, or `MobileNetV2`)
