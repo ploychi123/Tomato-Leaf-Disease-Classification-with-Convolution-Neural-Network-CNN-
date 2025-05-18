@@ -4,34 +4,34 @@ This project focuses on the classification of plant diseases using image data fr
 
 ---
 
-## Classification Tomato Plant Disease is crucial for several reasons:
-- **🌾 Agricultural Productivity**: The early and accurate identification of tomato leaf diseases helps prevent widespread outbreaks. This is critical for agricultural productivity, as it ensures healthy plant growth and maximizes crop yield.
-- **💰 Economic Impact**: Reducing crop losses due to leaf diseases directly supports farmers' financial stability and strengthens the overall agricultural economy, especially in regions where tomatoes are a key cash crop.
-- **🍽️ Food Security**: Protecting tomato plants from disease ensures consistent production, which contributes to maintaining a stable and sufficient food supply for local and global consumption.
-- **🌱 Environmental Protection**: Efficient disease classification enables targeted and appropriate treatments, reducing the overuse of pesticides and promoting environmentally sustainable farming practices.
-- **🧠 Technological Advancement**: Using computer vision and deep learning (e.g., CNN) for disease classification enables faster and more accurate diagnosis, empowering farmers with modern tools for smart agriculture.
-- **🔬 Research and Disease Monitoring**: Accurate classification data supports the development of disease-resistant tomato varieties and helps establish systems for early warning and monitoring of disease outbreaks by season or region.
+## 🌾 Classification Tomato Plant Disease is crucial for several reasons:
+- **Agricultural Productivity**: The early and accurate identification of tomato leaf diseases helps prevent widespread outbreaks. This is critical for agricultural productivity, as it ensures healthy plant growth and maximizes crop yield.
+- **Economic Impact**: Reducing crop losses due to leaf diseases directly supports farmers' financial stability and strengthens the overall agricultural economy, especially in regions where tomatoes are a key cash crop.
+- **Food Security**: Protecting tomato plants from disease ensures consistent production, which contributes to maintaining a stable and sufficient food supply for local and global consumption.
+- **Environmental Protection**: Efficient disease classification enables targeted and appropriate treatments, reducing the overuse of pesticides and promoting environmentally sustainable farming practices.
+- **Technological Advancement**: Using computer vision and deep learning (e.g., CNN) for disease classification enables faster and more accurate diagnosis, empowering farmers with modern tools for smart agriculture.
+- **Research and Disease Monitoring**: Accurate classification data supports the development of disease-resistant tomato varieties and helps establish systems for early warning and monitoring of disease outbreaks by season or region.
 ---
 
 ## 📁 Dataset
 
 The dataset contains **20,639** images of plant leaves categorized into **15 classes**. These classes represent combinations of plant species and associated diseases, including healthy leaves.
 - **Categories**
--Pepper__bell___Bacterial_spot
--Pepper__bell___healthy
--Potato___Early_blight
--Potato___Late_blight
--Potato___healthy
--Tomato_Bacterial_spot
--Tomato_Early_blight
--Tomato_Late_blight
--Tomato_Leaf_Mold
--Tomato_Septoria_leaf_spot
--Tomato_Spider_mites_Two_spotted_spider_mite
--Tomato__Target_Spot
--Tomato__Tomato_YellowLeaf__Curl_Virus
--Tomato__Tomato_mosaic_virus
--Tomato_healthy
+  - Pepper__bell___Bacterial_spot
+  - Pepper__bell___healthy
+  - Potato___Early_blight
+  - Potato___Late_blight
+  - Potato___healthy
+  - Tomato_Bacterial_spot
+  - Tomato_Early_blight
+  - Tomato_Late_blight
+  - Tomato_Leaf_Mold
+  - Tomato_Septoria_leaf_spot
+  - Tomato_Spider_mites_Two_spotted_spider_mite
+  - Tomato__Target_Spot
+  - Tomato__Tomato_YellowLeaf__Curl_Virus
+  - Tomato__Tomato_mosaic_virus
+  - Tomato_healthy
 
 - **Format**: `.jpg` images size 256x256 pixel
 - **Structure**: Folder-based classification (one folder per class)
