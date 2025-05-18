@@ -90,6 +90,8 @@ model = Sequential([
 - **Test Set Accuracy**: 91%
 - **Misclassified Classes**: Often occurred between visually similar diseases like Early vs. Late Blight or Spider Mites vs. Septoria Leaf Spot.
 
+---
+
 ## 🔍 Observations from Evaluation:
 - Tomato_Bacterial_spot and Tomato_Tomato_YellowLeaf_Curl_Virus achieved very high precision and recall (close to or above 95%), indicating the model performed well in identifying clear visual symptoms.
 - Tomato_Early_blight and Tomato_Late_blight had lower precision and recall (around 84-90%), likely due to similar visual features, making them harder to distinguish.
