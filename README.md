@@ -4,7 +4,7 @@ This project focuses on the classification of plant diseases using image data fr
 
 ---
 
-## 🌾 Classification Tomato Plant Disease is crucial for several reasons:
+## 🍅 Classification Tomato Plant Disease is crucial for several reasons:
 - **Agricultural Productivity**: The early and accurate identification of tomato leaf diseases helps prevent widespread outbreaks. This is critical for agricultural productivity, as it ensures healthy plant growth and maximizes crop yield.
 - **Economic Impact**: Reducing crop losses due to leaf diseases directly supports farmers' financial stability and strengthens the overall agricultural economy, especially in regions where tomatoes are a key cash crop.
 - **Food Security**: Protecting tomato plants from disease ensures consistent production, which contributes to maintaining a stable and sufficient food supply for local and global consumption.
@@ -41,19 +41,41 @@ The dataset contains **20,639** images of plant leaves categorized into **15 cla
 ## ⚙️ Methodology
 
 ### 1. Data Preprocessing
-- Data Augmentation for classes with < 1000 images
-- Normalized pixel values
+- Import Data from Kaggle
+- Select 10 Tomato Leaf Disease Classes only
+- Cut off each class to 1,000 images max
+- Data Augmentation for classes with fewer than 1,000 images
+- Split the dataset into Training, Validation, and Test Sets (70/15/15)
+- Normalize pixel values to the range [0,1]
 
 ### 2. Model Architecture
-- **Base Model**: Transfer learning using a pre-trained CNN model (e.g., `ResNet50`, `EfficientNetB0`, or `MobileNetV2`)
-- Added custom dense layers for classification
-- Used softmax activation in the final layer for multi-class classification
+A custom CNN model was built from scratch with the following layers:
+```python
+model = Sequential([
+    Conv2D(32, (3, 3), activation='relu', input_shape=(150, 150, 3)),
+    MaxPooling2D(2, 2),
+
+    Conv2D(64, (3, 3), activation='relu'),
+    MaxPooling2D(2, 2),
+
+    Conv2D(128, (3, 3), activation='relu'),
+    MaxPooling2D(2, 2),
+
+    Flatten(),
+    Dropout(0.5),
+    Dense(128, activation='relu'),
+    Dense(train_generator.num_classes, activation='softmax')
+])
+```
+- Total convolutional layers: 3
+- Activation function: ReLU
+- Output: Softmax layer matching number of disease classes
 
 ### 3. Training
-- Split the dataset: 80% for training, 20% for validation
+
 - Optimizer: Adam
 - Loss Function: Categorical Crossentropy
-- Epochs: 10–25 depending on experiment
+- Epochs: 100 
 - Batch Size: 32
 
 ### 4. Evaluation
@@ -64,9 +86,12 @@ The dataset contains **20,639** images of plant leaves categorized into **15 cla
 
 ## 📊 Results
 
-- **Best Accuracy on Validation Set**: 98.5% (using ResNet50 + augmentation)
-- **Overfitting**: Minor; controlled via dropout and augmentation
-- **Misclassified Classes**: Often among visually similar diseases like early vs. late blight
+- **Best Accuracy on Validation Set**: 89.29%
+- **Test Set Accuracy**: 91%
+- **Misclassified Classes**: Often occurred between visually similar diseases like Early vs. Late Blight or Spider Mites vs. Septoria Leaf Spot.
 
-Example confusion matrix and accuracy curve (add image if available):
-
+## 🔍 Observations from Evaluation:
+- Tomato_Bacterial_spot and Tomato_Tomato_YellowLeaf_Curl_Virus achieved very high precision and recall (close to or above 95%), indicating the model performed well in identifying clear visual symptoms.
+- Tomato_Early_blight and Tomato_Late_blight had lower precision and recall (around 84-90%), likely due to similar visual features, making them harder to distinguish.
+- Tomato_Septoria_leaf_spot and Spider_mites_Two_spotted_spider_mite also showed lower performance, potentially due to overlapping symptom patterns like spots and lesions.
+- Tomato_healthy was correctly identified in most cases, with a 98% recall and 95% precision.
