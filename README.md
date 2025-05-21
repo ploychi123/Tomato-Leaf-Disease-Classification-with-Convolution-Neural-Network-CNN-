@@ -49,6 +49,8 @@ The dataset contains **20,639** images of plant leaves categorized into **15 cla
 - Normalize pixel values to the range [0,1]
 
 ### 2. Model Architecture
+CNN Model Architecture
+![CNN Architecture](https://github.com/ploychi123/Tomato-Leaf-Disease-Classification-with-Convolution-Neural-Network-CNN-/blob/main/Architecture.png)
 A custom CNN model was built from scratch with the following layers:
 ```python
 model = Sequential([
