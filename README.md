@@ -2,7 +2,7 @@
 
 This project focuses on the classification of plant diseases using image data from the Plant Disease Dataset available on Kaggle. The goal is to develop a model that can accurately identify plant diseases from leaf images using computer vision techniques.
 
----
+
 
 ## 🍅 Classification Tomato Plant Disease is crucial for several reasons:
 - **Agricultural Productivity**: The early and accurate identification of tomato leaf diseases helps prevent widespread outbreaks. This is critical for agricultural productivity, as it ensures healthy plant growth and maximizes crop yield.
@@ -11,7 +11,7 @@ This project focuses on the classification of plant diseases using image data fr
 - **Environmental Protection**: Efficient disease classification enables targeted and appropriate treatments, reducing the overuse of pesticides and promoting environmentally sustainable farming practices.
 - **Technological Advancement**: Using computer vision and deep learning (e.g., CNN) for disease classification enables faster and more accurate diagnosis, empowering farmers with modern tools for smart agriculture.
 - **Research and Disease Monitoring**: Accurate classification data supports the development of disease-resistant tomato varieties and helps establish systems for early warning and monitoring of disease outbreaks by season or region.
----
+
 
 ## 📁 Dataset
 
@@ -36,7 +36,7 @@ The dataset contains **20,639** images of plant leaves categorized into **15 cla
 - **Format**: `.jpg` images size 256x256 pixel
 - **Structure**: Folder-based classification (one folder per class)
 
----
+
 
 ## ⚙️ Methodology
 
@@ -82,7 +82,7 @@ model = Sequential([
 - Metrics used: Accuracy, Precision, Recall, F1-score
 - Confusion matrix analysis to check misclassification
 
----
+
 
 ## 📊 Results
 
@@ -90,7 +90,7 @@ model = Sequential([
 - **Test Set Accuracy**: 91%
 - **Misclassified Classes**: Often occurred between visually similar diseases like Early vs. Late Blight or Spider Mites vs. Septoria Leaf Spot.
 
----
+
 
 ## 🔍 Observations from Evaluation:
 - Tomato_Bacterial_spot and Tomato_Tomato_YellowLeaf_Curl_Virus achieved very high precision and recall (close to or above 95%), indicating the model performed well in identifying clear visual symptoms.
