@@ -51,6 +51,9 @@ The dataset contains **20,639** images of plant leaves categorized into **15 cla
 ### 2. Model Architecture
 CNN Model Architecture
 ![CNN Architecture](https://github.com/ploychi123/Tomato-Leaf-Disease-Classification-with-Convolution-Neural-Network-CNN-/blob/main/Architecture.png)
+
+The use of Convolutional Neural Networks (CNN) in image classification is a key technique in the field of Computer Vision. CNN is a specialized type of neural network designed to handle image data more effectively than traditional neural networks.CNNs automatically learn image features through multiple network layers, significantly improving the system's ability to understand and classify images compared to traditional methods that rely on manual feature extraction.
+
 A custom CNN model was built from scratch with the following layers:
 ```python
 model = Sequential([
