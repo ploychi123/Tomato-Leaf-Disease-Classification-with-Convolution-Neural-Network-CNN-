@@ -1,4 +1,4 @@
-# Tomato Leaf Disease Classification using Deep Learning
+# Tomato Leaf Disease Classification with CNN
 
 This project focuses on the classification of plant diseases using image data from the Plant Disease Dataset available on Kaggle. The goal is to develop a model that can accurately identify plant diseases from leaf images using computer vision techniques.
 
